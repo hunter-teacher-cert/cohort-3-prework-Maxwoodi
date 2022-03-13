@@ -26,7 +26,10 @@ public static void main(String [] args)
 {
  
 int [] a = {3,4,1,5,10,0,2};
-System.out.print(indexOfMax(a));
+int maxInteger = indexOfMax(a);
+  
+    System.out.print("The maximum index is:" + maxInteger);
+   
 }
 
 

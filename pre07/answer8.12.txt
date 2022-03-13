@@ -33,12 +33,17 @@ of the array.
 
 
 The pineapple() method is used to count the number of occurences of a given integer in an array of
-integers and return that count. 
+integers, a,  and return that count.
 
-The variable represents the passing of the reference of an array of integers. "apple" is an integer
-variable used to pass the specific integer being counted."pear" is an integer counter variable initialized to store 
+ 
 
-zero.
+ a ---- represents the passing of the reference of an array of integers. 
+
+"apple" ---- represents the target integer
+
+"pine" -----represents each element in the array being counted.
+
+"pear" is an integer counter variable initialized to store zero. It is used to store the count.
 
 
 

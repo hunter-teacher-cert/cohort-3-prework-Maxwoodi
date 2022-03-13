@@ -8,22 +8,22 @@ public class Loops
   {
    double x0 = a/2.0;
    double  x1= 0.0;
-   double x2 = 0.0;
+   double x2 = 1.0;
 
-   while (Math.abs(x0 - x2) < 0.0001)
+   while (Math.abs(x0-x2)< 0.0001)
    {
-     
      x1 = (x0 + a/x0)/2;
      x2 = x0;
      x0 = x1;
-   
-    }
+   System.out.println(x2);
+     System.out.println(x0);
+     }
      return x1;
   }
  
   //Chapter 7.9 Exercise # 3
 
-/*public static double power(double x, int n)
+public static double power(double x, int n)
  {
    double product = 1;
 
@@ -38,13 +38,12 @@ public class Loops
     }
      return product;
     
-
+ 
    
-   
- }*/
+ }
 
   //Chapter 7.9 Exercise # 4
- /* public static int factorial(int num)
+  public static int factorial(int num)
   {
      int fact= num; 
     if(num == 0)
@@ -62,16 +61,24 @@ public class Loops
 
     }
 
-  }*/
+  }
 
   public static void main(String [] args)
   {
+    // squareRoot(double a)
     double a = 36.0;
-   System.out.print(" Square root of:" + " " + a + " " + "is"+ " " + squareRoot(a));
+   System.out.println(" Square root of:" + " " + a + " " + "is"+ " " + squareRoot(a));
 
    //System.out.print(power(2.0,6));
+    double x = 2.0;
+    int n = 6;
+ System.out.println( power(x,n));
 
+    
   // System.out.print(factorial(3));
+
+    System.out.println( n + "!" + "factorial is:" + 
+    factorial(3));
 
   }
 

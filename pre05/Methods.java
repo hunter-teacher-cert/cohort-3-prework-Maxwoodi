@@ -4,7 +4,7 @@ public class Methods
 {
 /* Chapter 6.11 Exercise 2
 Write a method named isDivisible that takes two integers, n and m, and that returns true if n is divisible by m, and false otherwise.*/
-/*
+
 public static boolean isDivisible(int n,int m)
 {
   if( n % m == 0)
@@ -16,10 +16,10 @@ public static boolean isDivisible(int n,int m)
     return false;
   }
 
-}*/
+}
 
 // Chapter 6.11 Exercise 3
-/*public static boolean isTriangle(int stickA, int stickB, int stickC)
+public static boolean isTriangle(int stickA, int stickB, int stickC)
 {
   if(((stickA + stickB) < stickC) || ((stickA + stickC) < stickB) ||((stickB + stickC) < stickA))
   {
@@ -31,7 +31,7 @@ public static boolean isDivisible(int n,int m)
   }
 
 
-}*/
+}
 
 // Chapter 6.11 Exercise 8
 
@@ -56,10 +56,7 @@ public static int ack(int m, int n)
       //int result = recurse2;
        return result;
      }
-     /*else
-     {
-       return n;
-     }*/
+     
   
 
 }
@@ -68,17 +65,17 @@ public static int ack(int m, int n)
 public static void main(String [] args)
 {
   // Is n divisible by m ?
-/*int n = 12;
+int n = 12;
 int m = 3; 
-System.out.print( " Is" + " " + n + " " + "divisible by" + "" + m + " " + isDivisible(n, m));?*/
+System.out.print( " Is" + " " + n + " " + "divisible by" + "" + m + " " + isDivisible(n, m));
 
 // Is Triangle
-/*int stickA = 1;
+int stickA = 1;
 int stickB = 12;
 int stickC = 1;
 
 System.out.print(" Does a, b, and c represent the side lengths of a triangle?" + isTriangle(stickA,stickB,stickC));
-}*/
+}
 
 // Ackerman Recursive Function
 
