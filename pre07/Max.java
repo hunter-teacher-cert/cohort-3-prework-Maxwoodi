@@ -32,10 +32,4 @@ int maxInteger = indexOfMax(a);
    
 }
 
-
-
-
-
-
-
 }

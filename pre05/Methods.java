@@ -51,10 +51,11 @@ public static int ack(int m, int n)
      else //if(m > 0 && n > 0 )
     { 
       int recurse1= ack(m, n-1);
-      int recurse2= ack(m-1, recurse1);
-      int result = ack(ack(m-1),ack(m,n-1));
+      int recurse2= ack(m-1,recurse1);
+      //int result = ack(recurse2, recurse1);
       //int result = recurse2;
-       return result;
+       //return result;
+      return recurse2;
      }
      
   
@@ -69,19 +70,23 @@ int n = 12;
 int m = 3; 
 System.out.print( " Is" + " " + n + " " + "divisible by" + "" + m + " " + isDivisible(n, m));
 
+
+  
 // Is Triangle
 int stickA = 1;
 int stickB = 12;
 int stickC = 1;
 
-System.out.print(" Does a, b, and c represent the side lengths of a triangle?" + isTriangle(stickA,stickB,stickC));
-}
+System.out.println(" Does a, b, and c represent the side lengths of a triangle?" + isTriangle(stickA,stickB,stickC));
 
+
+  
 // Ackerman Recursive Function
 
-int m = 2;
-int n = 1;
+int r = 2;
+int s = 1;
 
-System.out.print(ack(m,n));
+System.out.print(" The result is:" + " " + ack(r,s));
+
 }
 }

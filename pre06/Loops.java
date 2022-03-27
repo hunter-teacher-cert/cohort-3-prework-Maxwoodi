@@ -7,17 +7,19 @@ public class Loops
  public static double squareRoot(double a)
   {
    double x0 = a/2.0;
-   double  x1= 0.0;
-   double x2 = 1.0;
-
-   while (Math.abs(x0-x2)< 0.0001)
+   double x2 = 0.0;
+   double x1 = (x0 + a/x0)/2;
+  
+  
+    
+   while(Math.abs(x0 - x2) > 0.0001)
    {
      x1 = (x0 + a/x0)/2;
      x2 = x0;
      x0 = x1;
-   System.out.println(x2);
-     System.out.println(x0);
-     }
+  
+  
+  }
      return x1;
   }
  
@@ -28,8 +30,7 @@ public static double power(double x, int n)
    double product = 1;
 
    
-    
-    
+       
     for(int index = 1; index <= n ; index++)
     {
       
@@ -66,7 +67,7 @@ public static double power(double x, int n)
   public static void main(String [] args)
   {
     // squareRoot(double a)
-    double a = 36.0;
+    double a = 11;
    System.out.println(" Square root of:" + " " + a + " " + "is"+ " " + squareRoot(a));
 
    //System.out.print(power(2.0,6));
@@ -79,6 +80,8 @@ public static double power(double x, int n)
 
     System.out.println( n + "!" + "factorial is:" + 
     factorial(3));
+
+    
 
   }
 

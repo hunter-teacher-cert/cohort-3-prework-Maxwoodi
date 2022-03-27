@@ -14,6 +14,8 @@ public class Array
    return squareRay;
  }
 
+
+  
 // Exercise 8.12.1 Part 2
   
   public static double [] powArray(double [] ray, double n)
@@ -27,18 +29,29 @@ public class Array
    return squareRay;
  }
 
+
+  
 // Exercise 8.12.1 Part 2 A
+  public static int [] randomArray(int size)
+  {
+    Random random = new Random();
+    int [] a = new int[size];
+    for(int i = 0; i < a.length; i++)
+      {
+        a[i] = random.nextInt(100);
+      }
+    return a;
+  }
+  
   public static int [] histogram( int [] scores)
   {
    int [] counts = new int[scores.length];
 
-    for(int i = 0; i < scores.length; i++)
+    for(int score : scores)
       {
-       int index = scores[i];
-        counts[index]++;
+        counts[score]++;
       }
     return counts;
-     
   }
 
   
@@ -47,10 +60,9 @@ public class Array
  {
     int [] counts = new int[numCounter];
 
-   for(int i = 0; i < scores.length; i++)
+   for(int score: scores)
    {
-     int index = scores[i];
-     counts[index]++;
+     counts[score]++;
    }
   return counts;
 
@@ -58,50 +70,50 @@ public class Array
 
   public static void main(String [] args)
   {
-    // Exercise 8.12.1 Part 1
-   double [] a = {1.0,2.0,3.0,4.0};
+    // Exercise 8.12.1 Part 1 A
+  double [] ray = {2.5,3.0,7.5, 4.0,1.5};
 
-    double [] result = powArray(a);
-   for(int j = 0; j < a.length; j++)
-   {
-   System.out.print( result[j] + " ");
-   }
-     // Exercise 8.12.1 Part 2
-    double n = 3.0;
-    double [] result2 = powArray(a,n);
-for(int j = 0; j < a.length; j++)
-   {
-   System.out.print( result2[j] + " ");
-   }
-    
-
-    // Exercise 8.12.1 Part 2
-
-    int [] scores = new int[100];
-
-    for(int index = 0; index < scores.length; index++)
+    double [] doubleRay = powArray(ray);
+    for(int i = 0; i< ray.length; i++)
       {
-       scores[index] = index + 2;
-        
+        System.out.print(doubleRay[i] + " ");
       }
 
+
+    // Exercise 8.12.1 Part 1 B
+    int num = 3;
+    double [] doubleRay1 = powArray(ray,num);
+    for(int j = 0; j < ray.length; j++)
+      {
+        System.out.print(doubleRay1[j] + " ");
+      }
+
+
+    
      // Exercise 8.12.1 Part 2 A
 
-    int [] result3 = histogram(scores);
-    for( int j = 0 ; j < result3.length; j++)
+     int size = 100; 
+  
+     int [] scores = randomArray(size);
+
+    int [] counter1 = histogram(scores);
+    
+    System.out.println("Counter for histogram(scores):");
+    for(int e:counter1)
       {
-        System.out.print( result3[j] + " ");
+        System.out.println(e + " ");
       }
 
+    
     
 
      // Exercise 8.12.1 Part 2 B
-    int numCounter = 100;
-    int [] result4 = histogram(scores,numCounter );
-
-    for(int j = 0; j < result4.length ; j++)
+    int n = 100;
+    int [] counter2 = histogram(scores,n);
+    System.out.println(" Counter for histogram(scores,n):");
+    for(int y: counter2)
       {
-       System.out.print(result4[j] + " ");
+        System.out.println(y + " ");
       }
 
       
